@@ -45,6 +45,8 @@ A beginner-friendly weather application that displays real-time weather data and
    ```bash
    git clone https://github.com/arkaparno/weather-app.git
    cd weather-app
-=======
+
+---
+
 # weather-app
 A weather application that shows real-time weather and generates shareable cards
