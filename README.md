@@ -46,6 +46,8 @@ A beginner-friendly weather application that displays real-time weather data and
    git clone https://github.com/arkaparno/weather-app.git
    cd weather-app
 
+2. Replace the texts in api key variables with your actual key
+
 ---
 
 # weather-app
