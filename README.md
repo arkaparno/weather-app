@@ -48,4 +48,3 @@ A beginner-friendly weather application that displays real-time weather data and
 =======
 # weather-app
 A weather application that shows real-time weather and generates shareable cards
->>>>>>> cb447bc6ac51e153eedd9379e19f5a5a81f291f6
