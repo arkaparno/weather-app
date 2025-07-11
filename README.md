@@ -35,7 +35,7 @@ A beginner-friendly weather application that displays real-time weather data and
 - **OpenWeatherMap API**
 - **TimeZoneDB API**
 - **Wikipedia API**
-- **html2canvas (for screenshot sharing)**
+- **html2canvas**
 
 ---
 
