@@ -1,4 +1,4 @@
-const apiKey = "5f1d3a06a3c7a2710b7c3e758a4cce2d";
+const apiKey = "<Unsplash API Key>"; // Replace with your actual key
 
 // ENTER key support
 document.getElementById("cityInput").addEventListener("keypress", function (e) {
@@ -47,7 +47,7 @@ function showWeatherForecast(data) {
   const lat = data.city.coord.lat;
   const lon = data.city.coord.lon;
 
-  const timezoneApiKey = "ZQ1ERRQAEMWT"; // Replace with your actual key
+  const timezoneApiKey = "<TimeZone Api Key>"; // Replace with your actual key
 
   fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${timezoneApiKey}&format=json&by=position&lat=${lat}&lng=${lon}`)
     .then(res => res.json())
