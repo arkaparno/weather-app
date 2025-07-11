@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🌦️ Weather App
 
 A beginner-friendly weather application that displays real-time weather data and generates shareable weather cards with city landmark backgrounds. Built using **JavaScript**, **Tailwind CSS**, and open APIs.
