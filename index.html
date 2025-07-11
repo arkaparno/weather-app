@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <style>
+  #weatherResult {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your script file -->
+  <script src="script.js" defer></script>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center p-4 text-gray-800 transition duration-300">
+  <div class="bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl rounded-xl p-6 w-full max-w-md z-10 text-white">
+
+    <!-- App Title -->
+    <h1 class="text-2xl font-bold text-center mb-4">🌦️ Weather App</h1>
+
+    <!-- Search input and button -->
+    <div class="flex mb-4">
+      <input type="text" id="cityInput" placeholder="Enter city name"
+        class="flex-grow border border-gray-300 p-2 rounded-l text-black"/>
+      <button onclick="getWeather()" class="bg-blue-500 text-white p-2 rounded-r">Search</button>
+    </div>
+
+    <!-- Output section -->
+    <div id="weatherResult" class="text-center space-y-2"></div>
+    <!-- Modal Overlay for Weather Card -->
+<!-- Modal Overlay for Weather Card -->
+<div id="weatherModal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4">
+  <div class="flex flex-col items-center">
+    
+    <!-- Weather Card -->
+    <div id="weatherCard" class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-md border border-white/30 text-white" style="aspect-ratio: 1.2;">
+      <!-- Background Image -->
+      <img id="cardImage" class="absolute inset-0 w-full h-full object-cover" crossorigin="anonymous" />
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <!-- Card Content -->
+      <div class="relative z-10 flex flex-col justify-between h-full p-6">
+        <div>
+          <h2 id="cardCity" class="text-3xl font-bold leading-tight drop-shadow-md"></h2>
+          <p id="cardWeather" class="text-lg italic mt-1 drop-shadow-sm"></p>
+        </div>
+        <div class="text-center mt-4">
+          <p id="cardQuote" class="text-xl font-semibold italic drop-shadow-lg"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls outside the card -->
+    <div class="mt-6 text-center">
+      <button onclick="shareWeatherCard()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-200">📤 Share This Card</button>
+      <button onclick="closeCardPopup()" class="ml-4 text-gray-200 underline hover:text-white text-sm">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Preview Button -->
+<div id="shareBtnWrapper" class="hidden mt-4 text-center">
+  <button onclick="openCardPopup()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">📷 Preview Weather Card</button>
+</div>
+
+
+  </div>
+</body>
+</html>
